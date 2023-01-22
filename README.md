@@ -7,6 +7,7 @@ To help give me the push I needed to do it followed the course at [dotfiles.eiei
 ## Todo
 
 - [ ] [Create a bootable USB installer for macOS](https://support.apple.com/en-us/HT201372).
+- [ ] List of applications to add via package managers:
   - AlDente
   - Arc
   - Authy
