@@ -50,8 +50,7 @@ To help give me the push I needed to do it followed the course at [dotfiles.eiei
 4. Do a software audit by editing [Brewfile](Brewfile) directly.
 5. [`./install`](install)
 6. Restart computer.
-7. Run `mackup restore`. Consider doing a `mackup restore --dry-run --verbose` first.
-8. [Generate ssh key](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh), add to GitHub, and switch remotes.
+7. [Generate ssh key](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh), add to GitHub, and switch remotes.
 
 ```zsh
 # Generate SSH key in default location (~/.ssh/config)
@@ -79,7 +78,7 @@ pbcopy < ~/.ssh/id_rsa.pub
 ssh -T git@github.com
 
 # Switch from HTTPS to SSH
-git remote set-url origin git@github.com:eieioxyz/dotfiles_macos.git
+git remote set-url origin git@github.com:ellyloel/dotfiles.git
 ```
 
 ### Manual Steps
