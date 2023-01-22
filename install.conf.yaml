@@ -18,6 +18,7 @@
       create: true
       path: config/starship.toml
     ~/.czrc:
+    ~/.finicky.js:
     ~/.gitconfig:
     ~/.nvm:
       create: true
