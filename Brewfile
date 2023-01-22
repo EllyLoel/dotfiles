@@ -100,30 +100,55 @@ brew "z"
 brew "zsh"
 # Bash scripts that integrate bat with various command-line tools
 brew "eth-p/software/bat-extras"
+cask "aldente"
 # Automatic tiling window manager similar to xmonad
 cask "amethyst"
-# Open-source browser prompter
-cask "browserosaurus"
+cask "authy"
+cask "cleanshot"
+cask "cron"
+cask "devkinsta"
+cask "discord"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Tool to hide status bar icons
 cask "dozer"
+cask "fig"
+cask "figma"
+cask "firefox"
+cask "firefox-developer-edition"
 # Developer targeted fonts with a high number of glyphs
 cask "font-jetbrains-mono-nerd-font"
 # Font editor and converter for outline and bitmap fonts
 cask "fontforge"
+cask "fork"
+cask "google-chrome"
+cask "google-chrome-dev"
 # Vector graphics editor
 cask "inkscape"
+cask "iterm2"
+cask "microsoft-edge"
+cask "microsoft-edge-dev"
+cask "miro"
+cask "obsidian"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 # App to write, plan, collaborate, and get organized
 cask "notion"
+cask "pika"
+cask "pixelsnap"
 # Browser for ambitious developers
 cask "polypane"
 # Control your tools with a few keystrokes
 cask "raycast"
+cask "rescuetime"
+cask "safari-technology-preview"
+cask "spotify"
+cask "slack"
+cask "via"
 # Open-source code editor
 cask "visual-studio-code"
+cask "warp"
+cask "zoom"
 mas "DuckDuckGo Privacy for Safari", id: 1482920575
 mas "Hand Mirror", id: 1502839586
 mas "Kindle", id: 405399194
