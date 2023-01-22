@@ -4,44 +4,6 @@ I've known about dotfiles for a long time but never taken the time to actually p
 
 To help give me the push I needed to do it, I followed the course at [dotfiles.eieio.xyz](http://dotfiles.eieio.xyz), I'd recommend it if you're also stuggling to take the plunge.
 
-## Todo
-
-- [ ] [Create a bootable USB installer for macOS](https://support.apple.com/en-us/HT201372).
-- [ ] List of applications to add via package managers:
-  - AlDente
-  - Arc
-  - Authy
-  - Choosy (check Chris Coiyer article)
-  - CleanShot X
-  - Cron
-  - DevKinsta
-  - Discord
-  - DisplayLink Manager
-  - Elgato Control Center
-  - Fig
-  - Figma
-  - Firefox
-  - Firefox Dev
-  - FontForge
-  - Fork
-  - Chrome
-  - Chrome Dev
-  - iTerm
-  - Edge
-  - Edge Dev
-  - Miro
-  - Obsidian
-  - Pika
-  - PixelSnap 2
-  - Raycast
-  - RescueTime
-  - Safari TP
-  - Spotify
-  - Slack
-  - VIA
-  - Warp
-  - Zoom
-
 ## Installation
 
 1. `xcode-select --install` (Command Line Tools are required for Git and Homebrew)
@@ -82,5 +44,9 @@ git remote set-url origin git@github.com:ellyloel/dotfiles.git
 ```
 
 ### Manual Steps
+
+- Arc
+- [DisplayLink Manager](https://www.synaptics.com/products/displaylink-graphics/downloads/macos)
+- [Elgato Control Center](https://www.elgato.com/en/downloads)
 
 _to be continued..._
