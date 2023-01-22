@@ -1,61 +1,96 @@
-# Fig pre block. Keep at the top of this file.
+########## Fig pre block. Keep at the top of this file. ##########
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-# Path to your oh-my-zsh installation.
+
+########## Set variables ##########
 export ZSH="/Users/ellyloel/.oh-my-zsh"
+export NULLCMD=bat
+export DOTFILES="$HOME/.dotfiles"
+export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# place this after nvm initialization!
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local nvmrc_path="$(nvm_find_nvmrc)"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="dracula"
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
 
-# Uncomment the following line to disable auto-setting terminal title.
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$(nvm version)" ]; then
+      nvm use
+    fi
+  elif [ -n "$(PWD=$OLDPWD nvm_find_nvmrc)" ] && [ "$(nvm version)" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
+########## Change ZSH Options ##########
+
+# Adjust History Variables & Options
+[[ -z $HISTFILE ]] && HISTFILE="$HOME/.zsh_history"
+HISTSIZE=5000 # Session Memory Limit
+SAVEHIST=4000 # File Memory Limit
+setopt histNoStore
+setopt extendedHistory
+setopt histIgnoreAllDups
+unsetopt appendHistory # explicit and unnecessary
+setopt incAppendHistoryTime
+
+# Line Editor Options (Completion, Menu, Directory, etc.)
+# autoMenu & autoList are on by default
+setopt autoCd
+setopt globDots
+
+# Disabling auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
 
-# Uncomment the following line to enable command auto-correction.
+# Disabling command auto-correction.
 ENABLE_CORRECTION="false"
 setopt correct
 
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
+########## Loading plugins ##########
+# Standard plugins are in $ZSH/plugins/ and custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm)
-
-NVM_HOMEBREW=$(brew --prefix nvm)
-NVM_LAZY="1"
-NVM_AUTOLOAD="1"
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-alias zshconfig="code ~/.zshrc"
-alias ohmyzsh="code ~/.oh-my-zsh"
+########## Setting aliases ##########
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 alias g='git'
+alias y='yarn'
+alias ls='exa -laFh --git'
+alias exa='exa'
 alias cz='cz --name cz_commitizen_emoji commit'
 alias python='python3'
 alias pip='pip3'
+alias man=batman
+alias bbd="brew bundle dump --force --describe"
+# Load history into shell (shareHistory alternative)
+alias lh='fc -RI; echo "loaded and showing..."; history;'
 
 eval "$(starship init zsh)"
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+########## Add locations to $path array variable ##########
+typeset -U path 
+path=(
+	$path
+	"$HOME/.yarn/bin"
+	"$HOME/.config/yarn/global/node_modules/.bin"
+	"/Users/ellyloel/.local/bin"
+	"/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+)
 
-# Created by `pipx` on 2022-03-10 05:59:26
-export PATH="$PATH:/Users/ellyloel/.local/bin"
+########## ##########
 
 if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-
 fi
 
-# Fig post block. Keep at the bottom of this file.
+########## Fig post block. Keep at the bottom of this file. ##########
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

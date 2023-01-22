@@ -1,0 +1,47 @@
+{
+  "commitizen": {
+    "path": "cz-emoji"
+  },
+  "config": {
+    "cz-emoji": {
+      "types": [
+        {
+          "emoji": "🐛",
+          "code": ":bug:",
+          "description": "Fixing a bug.",
+          "name": "fix"
+        },
+        {
+          "emoji": "✨",
+          "code": ":sparkles:",
+          "description": "Introducing new features.",
+          "name": "feat"
+        },
+        {
+          "emoji": "📝",
+          "code": ":memo:",
+          "description": "Adding or updating documentation.",
+          "name": "docs"
+        },
+        {
+          "emoji": "🧹",
+          "code": ":broom:",
+          "description": "General cleaning up / improving of anything in the repo.",
+          "name": "chore"
+        },
+        {
+          "emoji": "♻️",
+          "code": ":recycle:",
+          "description": "Refactoring code, neither a fix nor a feat.",
+          "name": "refactor"
+        },
+        {
+          "emoji": "🎨",
+          "code": ":art:",
+          "description": "Improving structure / format of the code.",
+          "name": "style"
+        }
+      ]
+    }
+  }
+}

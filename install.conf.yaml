@@ -2,16 +2,46 @@
     link:
       relink: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
-    ~/.tmux.conf: tmux.conf
-    ~/.vim: vim
-    ~/.vimrc: vimrc
+    ~/.config/bat:
+      create: true
+      path: config/bat
+    ~/.config/raycast:
+      create: true
+      path: config/raycast
+    ~/.config/yarn:
+      create: true
+      path: config/yarn
+    ~/.config/starship.toml:
+      create: true
+      path: config/starship.toml
+    ~/.czrc:
+    ~/.gitconfig:
+    ~/.nvm:
+      create: true
+      path: nvm
+      exclude: [nvm/versions, nvm/.cache]
+    ~/scripts:
+      create: true
+      path: scripts
+    ~/.zshrc:
+    ~/.zshenv:
 
 - create:
-    - ~/downloads
-    - ~/.vim/undo-history
+    - ~/git
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+    - command: /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+      stdout: true
+      stderr: true
+    - command: ./setup_homebrew.zsh
+      stdout: true
+      stderr: true
+    - command: ./setup_zsh.zsh
+      stdout: true
+      stderr: true
+    - command: ./setup_macos.zsh
+      stdout: true
+      stderr: true
