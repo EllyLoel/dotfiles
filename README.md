@@ -2,7 +2,7 @@
 
 I've known about dotfiles for a long time but never taken the time to actually pull them all together in a git repo, until now! (_2023/01/22_)
 
-To help give me the push I needed to do it followed the course at [dotfiles.eieio.xyz](http://dotfiles.eieio.xyz), I'd recommend it if you're also stuggling to take the plunge.
+To help give me the push I needed to do it, I followed the course at [dotfiles.eieio.xyz](http://dotfiles.eieio.xyz), I'd recommend it if you're also stuggling to take the plunge.
 
 ## Todo
 
