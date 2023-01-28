@@ -141,7 +141,6 @@ cask "polypane"
 # Control your tools with a few keystrokes
 cask "raycast"
 cask "rescuetime"
-cask "safari-technology-preview"
 cask "spotify"
 cask "slack"
 cask "via"
