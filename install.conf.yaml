@@ -24,7 +24,7 @@
       create: true
       path: nvm
       exclude: [nvm/versions, nvm/.cache]
-    ~/scripts:
+    ~/.scripts:
       create: true
       path: scripts
     ~/.zshrc:

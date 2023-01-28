@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "create-vite": "^4.0.0",
+    "glyphhanger": "^5.0.0",
+    "netlify-cli": "^12.6.0"
+  }
+}
