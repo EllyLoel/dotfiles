@@ -6,7 +6,8 @@ module.exports = {
   rewrite: [
     {
       // Redirect all urls to use https
-      match: ({ url }) => url.protocol === "http",
+      match: ({ url }) =>
+        url.protocol === "http" && !url.host.includes("localhost"),
       url: { protocol: "https" },
     },
   ],
