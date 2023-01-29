@@ -19,3 +19,10 @@ else
   echo "Enter user password to change login shell"
   chsh -s '/opt/homebrew/bin/zsh'
 fi
+
+if exists omz; then
+  echo "oh my zsh exists, skipping install"
+else
+  echo "oh my zsh doesn't exist, continuing with install"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
