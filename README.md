@@ -48,5 +48,9 @@ git remote set-url origin git@github.com:ellyloel/dotfiles.git
 - Arc
 - [DisplayLink Manager](https://www.synaptics.com/products/displaylink-graphics/downloads/macos)
 - [Elgato Control Center](https://www.elgato.com/en/downloads)
+- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
+- [Safari Technology Preview](https://developer.apple.com/safari/resources/)
+- [Google Chrome Dev](https://www.google.com/intl/en_au/chrome/dev/)
+- [Microsoft Edge Dev](https://www.microsoftedgeinsider.com/en-us/download)
 
 _to be continued..._
