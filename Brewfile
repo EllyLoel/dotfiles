@@ -113,19 +113,16 @@ cask "dozer"
 cask "fig"
 cask "figma"
 cask "firefox"
-cask "firefox-developer-edition"
 # Developer targeted fonts with a high number of glyphs
 cask "font-jetbrains-mono-nerd-font"
 # Font editor and converter for outline and bitmap fonts
 cask "fontforge"
 cask "fork"
 cask "google-chrome"
-cask "google-chrome-dev"
 # Vector graphics editor
 cask "inkscape"
 cask "iterm2"
 cask "microsoft-edge"
-cask "microsoft-edge-dev"
 cask "miro"
 cask "obsidian"
 # Reverse proxy, secure introspectable tunnels to localhost
