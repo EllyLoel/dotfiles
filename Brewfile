@@ -101,8 +101,6 @@ brew "zsh"
 # Bash scripts that integrate bat with various command-line tools
 brew "eth-p/software/bat-extras"
 cask "aldente"
-# Automatic tiling window manager similar to xmonad
-cask "amethyst"
 cask "authy"
 cask "cleanshot"
 cask "cron"
