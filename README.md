@@ -12,36 +12,7 @@ To help give me the push I needed to do it, I followed the course at [dotfiles.e
 4. Do a software audit by editing [Brewfile](Brewfile) directly.
 5. [`./install`](install)
 6. Restart computer.
-7. [Generate ssh key](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh), add to GitHub, and switch remotes.
-
-```zsh
-# Generate SSH key in default location (~/.ssh/config)
-ssh-keygen -t rsa -b 4096 -C "hello@ellyloel.com"
-
-# Start the ssh-agent
-eval "$(ssh-agent -s)"
-
-# Create config file with necessary settings
-<< EOF > ~/.ssh/config
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_rsa
-EOF
-
-# Add private key to ssh-agent
-ssh-add -K ~/.ssh/id_rsa
-
-# Copy public key and add to github.com > Settings > SSH and GPG keys
-pbcopy < ~/.ssh/id_rsa.pub
-
-# Test SSH connection, then verify fingerprint and username
-# https://help.github.com/en/github/authenticating-to-github/testing-your-ssh-connection
-ssh -T git@github.com
-
-# Switch from HTTPS to SSH
-git remote set-url origin git@github.com:ellyloel/dotfiles.git
-```
+7. [Generate ssh key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent), [add to GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account), and switch remotes.
 
 ### Manual Steps
 

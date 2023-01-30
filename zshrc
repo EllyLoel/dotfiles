@@ -1,6 +1,3 @@
-########## Fig pre block. Keep at the top of this file. ##########
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-
 ########## Set variables ##########
 export ZSH="/Users/ellyloel/.oh-my-zsh"
 export NULLCMD=bat
@@ -85,12 +82,3 @@ path=(
 	"/Users/ellyloel/.local/bin"
 	"/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 )
-
-########## ##########
-
-if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-fi
-
-########## Fig post block. Keep at the bottom of this file. ##########
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
