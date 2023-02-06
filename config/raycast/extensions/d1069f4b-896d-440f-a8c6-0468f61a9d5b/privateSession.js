@@ -17,7 +17,11 @@ ${n.message}`:y,B=[k,t,e].filter(Boolean).join(`
       end if
       ${e}
     end tell`}var ps=async()=>{let e=ln(`
-    set repeatEnabled to repeating
-    set repeating to not repeatEnabled
-    return not repeatEnabled
-  `);try{let t=await ge(e);await(0,$.showToast)({title:t==="true"?"Repeat On":"Repeat Off"})}catch{await(0,$.showToast)({style:$.Toast.Style.Failure,title:"Failed toggling repeat"})}};0&&(module.exports={});
+  tell application "System Events"
+	  tell process "Spotify"
+    click menu item 5 of menu 1 of menu bar item "Spotify" of menu bar 1
+    set privateSession to value of attribute "AXMenuItemMarkChar" of (menu item 5) of menu 1 of menu bar item "Spotify" of menu bar 1
+	  end tell
+  end tell
+  return privateSession
+`);try{let t=await ge(e);await(0,$.showToast)({title:t==="\u2713"?"Private session turned off":"Private session turned on"})}catch{await(0,$.showToast)({style:$.Toast.Style.Failure,title:"Failed toggling private session"})}};0&&(module.exports={});
