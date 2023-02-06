@@ -61,6 +61,7 @@ source $ZSH/oh-my-zsh.sh
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 alias g='git'
 alias y='yarn'
+alias pn='pnpm'
 alias ls='exa -laFh --git'
 alias exa='exa'
 alias cz='cz --name cz_commitizen_emoji commit'
