@@ -4,3 +4,4 @@ nvm/versions
 nvm/.cache
 **/node_modules/**
 config/raycast
+npmrc
