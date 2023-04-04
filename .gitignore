@@ -1,5 +1,6 @@
 Brewfile.lock.json
 .DS_Store
 nvm/versions
+nvm/.cache
 **/node_modules/**
-config/raycast/config.json
+config/raycast

@@ -83,3 +83,8 @@ path=(
 	"/Users/ellyloel/.local/bin"
 	"/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 )
+
+# pnpm
+export PNPM_HOME="/Users/ellyloel/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end

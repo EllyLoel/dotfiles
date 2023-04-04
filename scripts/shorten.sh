@@ -1,4 +1,4 @@
-#!/bin/zsh -i
+#!/usr/bin/env zsh
 
 # Required parameters:
 # @raycast.schemaVersion 1
@@ -15,4 +15,9 @@
 # @raycast.author Elly Loel
 # @raycast.authorURL https://github.com/EllyLoel
 
-cd /Users/ellyloel/git/elly.to/ && yarn netlify-shortener "$1" "$2"
+eval "$(ssh-agent -s)" >/dev/null
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519 >/dev/null 2>&1
+
+cd /Users/ellyloel/git/elly.to/
+
+yarn netlify-shortener "$1" "$2"
