@@ -1,40 +1,35 @@
 - defaults:
     link:
       relink: true
-
-- clean: ["~"]
-
+- clean:
+    - '~'
 - link:
     ~/.config/bat:
       create: true
       path: config/bat
-    ~/.config/raycast:
-      create: true
-      path: config/raycast
     ~/.config/yarn:
       create: true
       path: config/yarn
     ~/.config/starship.toml:
       create: true
       path: config/starship.toml
-    ~/.czrc:
-    ~/.finicky.js:
-    ~/.gitconfig:
-    ~/.npmrc:
+    ~/.czrc: null
+    ~/.finicky.js: null
+    ~/.gitconfig: null
     ~/.nvm:
       create: true
       path: nvm
-      exclude: [nvm/versions, nvm/.cache]
+      exclude:
+        - nvm/versions
+        - nvm/.cache
     ~/.scripts:
       create: true
       path: scripts
-    ~/.zshrc:
-    ~/.zshenv:
-    ~/.zprofile:
-
+    ~/.zshrc: null
+    ~/.zshenv: null
+    ~/.zprofile: null
 - create:
     - ~/git
-
 - shell:
     - command: /usr/sbin/softwareupdate --install-rosetta --agree-to-license
       stdout: true
