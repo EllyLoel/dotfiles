@@ -1,8 +1,6 @@
 tap "eth-p/software"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "ngrok/ngrok"
 tap "pantheon-systems/external"
@@ -31,20 +29,10 @@ brew "cdrtools"
 brew "cgif"
 # Statistics utility to count lines of code
 brew "cloc"
-# Defines a standard way of committing rules and communicating it
-brew "commitizen"
-# Postgres C API library
-brew "libpq"
-# Dependency Manager for PHP
-brew "composer"
 # Binary-decimal and decimal-binary routines for IEEE doubles
 brew "double-conversion"
-# Modern replacement for 'ls'
-brew "exa"
-# OpenType text shaping engine
-brew "harfbuzz"
-# Framework for layout and rendering of i18n text
-brew "pango"
+# Modern, maintained replacement for ls
+brew "eza"
 # High performance message passing library
 brew "open-mpi"
 # C routines to compute the Discrete Fourier Transform
@@ -59,6 +47,8 @@ brew "ghostscript"
 brew "git"
 # Generate introspection data for GObject libraries
 brew "gobject-introspection"
+# OpenType text shaping engine
+brew "harfbuzz"
 # Add GitHub support to git on the command-line
 brew "hub"
 # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
@@ -73,20 +63,22 @@ brew "less"
 brew "libgsf"
 # MNG/JNG reference library
 brew "libmng"
+# Postgres C API library
+brew "libpq"
+# Framework for layout and rendering of i18n text
+brew "pango"
 # Library to render SVG files using Cairo
 brew "librsvg"
 # Mac App Store command-line interface
 brew "mas"
-# Java-based project management
-brew "maven"
 # Manage multiple Node.js versions
 brew "nvm"
 # C library to read whole-slide images (a.k.a. virtual slides)
 brew "openslide"
-# General-purpose scripting language
-brew "php@8.0"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
+# Fast, disk space efficient package manager
+brew "pnpm"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Python version management
@@ -99,8 +91,6 @@ brew "python@3.9"
 brew "qt"
 # Cross-shell prompt for astronauts
 brew "starship"
-# Text interface for Git repositories
-brew "tig"
 # Library to create, extract, and modify Windows Imaging files
 brew "wimlib"
 # Utilities to create and convert Web Open Font File (WOFF) files
@@ -111,28 +101,14 @@ brew "yarn"
 brew "z"
 # UNIX shell (command interpreter)
 brew "zsh"
-# Offline NT Password Editor
-brew "sidneys/homebrew/chntpw"
 # Menu bar tool to limit maximum charging percentage
 cask "aldente"
-# Automatic tiling window manager similar to xmonad
-cask "amethyst"
-# Two-factor authentication software
-cask "authy"
 # Screen capturing tool
 cask "cleanshot"
-# Calendar for professionals and teams
-cask "cron"
-# Local WordPress Development Suite by Kinsta
-cask "devkinsta"
 # Voice and text chat software
 cask "discord"
-# App to build and share containerized applications and microservices
-cask "docker"
 # Tool to hide status bar icons
 cask "dozer"
-# Reimagine your terminal
-cask "fig"
 # Collaborative team software
 cask "figma"
 # Utility for customizing which browser to start
@@ -159,8 +135,10 @@ cask "microsoft-edge"
 cask "miro"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
-# App to write, plan, collaborate, and get organized
+# App to write, plan, collaborate, and get organised
 cask "notion"
+# Calendar for professionals and teams
+cask "notion-calendar"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Colour picker for colours onscreen
@@ -171,8 +149,6 @@ cask "pixelsnap"
 cask "polypane"
 # Control your tools with a few keystrokes
 cask "raycast"
-# Time optimising application
-cask "rescuetime"
 # Parallel browser engine
 cask "servo"
 # Instant messaging application focusing on security
@@ -193,8 +169,50 @@ cask "warp"
 cask "zoom"
 mas "DuckDuckGo Privacy for Safari", id: 1482920575
 mas "Hand Mirror", id: 1502839586
-mas "Kindle", id: 405399194
+mas "Kindle Classic", id: 405399194
 mas "Messenger", id: 1480068668
 mas "Moom", id: 419330170
 mas "Telegram", id: 747648890
 mas "Xcode", id: 497799835
+vscode "astro-build.astro-vscode"
+vscode "bradlc.vscode-tailwindcss"
+vscode "clinyong.vscode-css-modules"
+vscode "dbaeumer.vscode-eslint"
+vscode "digitalbrainstem.javascript-ejs-support"
+vscode "dotjoshjohnson.xml"
+vscode "dracula-theme.theme-dracula"
+vscode "dwkns.webc"
+vscode "eamodio.gitlens"
+vscode "ecmel.vscode-html-css"
+vscode "editorconfig.editorconfig"
+vscode "esbenp.prettier-vscode"
+vscode "formulahendry.auto-rename-tag"
+vscode "graphql.vscode-graphql"
+vscode "graphql.vscode-graphql-syntax"
+vscode "gruntfuggly.todo-tree"
+vscode "marko-js.marko-vscode"
+vscode "mblode.twig-language-2"
+vscode "mightbesimon.emoji-icons"
+vscode "ms-azuretools.vscode-docker"
+vscode "octref.vetur"
+vscode "okitavera.vscode-nunjucks-formatter"
+vscode "pflannery.vscode-versionlens"
+vscode "phoenisx.cssvar"
+vscode "pkief.material-icon-theme"
+vscode "redhat.vscode-yaml"
+vscode "ritwickdey.liveserver"
+vscode "ronnidc.nunjucks"
+vscode "runem.lit-plugin"
+vscode "rvest.vs-code-prettier-eslint"
+vscode "sdras.night-owl"
+vscode "shd101wyy.markdown-preview-enhanced"
+vscode "stylelint.vscode-stylelint"
+vscode "syler.sass-indented"
+vscode "tal7aouy.icons"
+vscode "tamasfe.even-better-toml"
+vscode "vscode-icons-team.vscode-icons"
+vscode "wix.vscode-import-cost"
+vscode "xdebug.php-debug"
+vscode "xdebug.php-pack"
+vscode "zignd.html-css-class-completion"
+vscode "zobo.php-intellisense"
